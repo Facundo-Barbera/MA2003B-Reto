@@ -129,7 +129,6 @@ for station in stations_row.unique():
 	if pd.isna(station) or station == "nan" or station.upper() not in station_name_to_code:
 		continue
 
-	# Find which columns contain data for the current station
 	station_columns = stations_row[stations_row == station].index.tolist()
 
 	station_data = {
@@ -220,8 +219,15 @@ for sheet_name, frame in df_2025_all_stations.items():
 	code_clean = str(sheet_name).strip().upper()
 	if code_clean in labels['stations'].keys():
 		f = frame.copy()
-		f['station_code'] = code_clean
-		frames_2025.append(f)
+
+		if len(f) > 0:
+			f = f.drop(f.index[0]).reset_index(drop=True)
+
+		if 'date' in f.columns:
+			f['date'] = pd.to_datetime(f['date'], errors='coerce')
+
+			f['station_code'] = code_clean
+			frames_2025.append(f)
 
 df_2025_all_stations_processed = pd.concat(frames_2025, ignore_index=True) if frames_2025 else pd.DataFrame()
 
@@ -238,6 +244,28 @@ main_dataframe = pd.concat(
 )
 
 Path("../data/processed").mkdir(parents=True, exist_ok=True)
+
+df_2020_2021_all_stations_processed.to_csv(
+	Path("../data/processed/df_2020_2021_all_stations_processed.csv"),
+	index=False,
+
+)
+df_2022_2023_all_stations_processed.to_csv(
+	Path("../data/processed/df_2022_2023_all_stations_processed.csv"),
+	index=False
+)
+df_2023_2024_all_stations_processed_no_2024.to_csv(
+	Path("../data/processed/df_2023_2024_all_stations_processed_no_2024.csv"),
+	index=False
+)
+df_2024_all_stations_processed.to_csv(
+	Path("../data/processed/df_2024_all_stations_processed.csv"),
+	index=False
+)
+df_2025_all_stations_processed.to_csv(
+	Path("../data/processed/df_2025_all_stations_processed.csv"),
+	index=False
+)
 
 main_dataframe.to_csv(
 	Path("../data/processed/main_dataframe.csv"),
