@@ -45,3 +45,22 @@ To install the dependencies:
 ```bash
 pip install -r requirements.txt
 ```
+
+# Process Datasets
+
+In the `scripts` directory, you will find the script `process_datasets.py` that will process the datasets.
+To run the script, use the following commands after activating the virtual environment:
+
+First, change the working directory to the `scripts` directory:
+```
+cd scripts
+```
+
+Then, run the script:
+
+```bash
+python process_datasets.py
+```
+
+You should see an output in `data/processed/` with the name `main_dataframe.csv`
+_Note: If you have already processed the datasets, running the script again will overwrite the existing files._
