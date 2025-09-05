@@ -8,6 +8,9 @@ current_JanJul2025,NO2,100.0
 pandemic_JanJul2020,CO,99.92
 baseline_JanJul2024,CO,100.0
 current_JanJul2025,CO,97.01
+pandemic_JanJul2020,O3,95.76
+baseline_JanJul2024,O3,97.9
+current_JanJul2025,O3,98.46
 pandemic_JanJul2020,NO,93.11
 baseline_JanJul2024,NO,99.93
 current_JanJul2025,NO,99.15
