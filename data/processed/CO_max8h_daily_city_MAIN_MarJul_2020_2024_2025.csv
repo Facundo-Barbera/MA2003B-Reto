@@ -1,4 +1,4 @@
-period_window,day,co_max8h
+period_window,day,CO_max8h
 baseline_MarJul2024,2024-03-01,2.646875
 baseline_MarJul2024,2024-03-02,2.603125
 baseline_MarJul2024,2024-03-03,2.440625
