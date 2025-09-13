@@ -1,0 +1,16 @@
+period_window,pollutant,imputed_count_among_values,imputed_pct_among_values
+baseline_MarJun2024,PM2.5,284,10.62
+baseline_MarJun2024,NO2,189,6.51
+baseline_MarJun2024,CO,170,2.93
+baseline_MarJun2024,NO,235,4.05
+baseline_MarJun2024,NOX_final,242,4.17
+current_MarJun2025,PM2.5,77,2.68
+current_MarJun2025,NO2,196,6.75
+current_MarJun2025,CO,84,1.5
+current_MarJun2025,NO,687,12.2
+current_MarJun2025,NOX_final,244,4.29
+pandemic_MarJun2020,PM2.5,202,7.8
+pandemic_MarJun2020,NO2,14,0.54
+pandemic_MarJun2020,CO,51,0.88
+pandemic_MarJun2020,NO,714,13.05
+pandemic_MarJun2020,NOX_final,417,7.2

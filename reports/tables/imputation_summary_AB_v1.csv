@@ -1,0 +1,19 @@
+pollutant,period,% celdas imputadas_AB
+CO,current,2.17
+CO,pandemic,2.02
+CO,transition,1.44
+NO,current,3.68
+NO,pandemic,6.8
+NO,transition,3.69
+NO2,current,2.4
+NO2,pandemic,5.01
+NO2,transition,4.12
+NOX_final,current,2.66
+NOX_final,pandemic,3.24
+NOX_final,transition,2.97
+O3,current,2.29
+O3,pandemic,1.86
+O3,transition,2.58
+PM2.5,current,5.75
+PM2.5,pandemic,5.9
+PM2.5,transition,6.67
